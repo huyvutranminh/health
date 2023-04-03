@@ -8,6 +8,7 @@ import Header from "./components/Header";
 
 const Home = lazy(() => import("./pages/Home"));
 const Records = lazy(() => import("./pages/Records"));
+const Columns = lazy(() => import("./pages/Columns"));
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/records" element={<Records />} />
+            <Route path="/columns" element={<Columns />} />
           </Routes>
         </Suspense>
         <Footer />

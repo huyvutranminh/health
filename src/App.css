@@ -7,26 +7,27 @@
   --gray: #777777;
 }
 
+/* BACKGROUND */
 .bg-dark {
   background-color: var(--dark-500);
 }
-
 .bg-overlay {
   background-color: var(--dark-600-light);
 }
-
 .bg-yellow-custom {
   background-color: var(--primary-300);
 }
-
 .bg-gradient {
   background: linear-gradient(32.95deg, #ffcc21 8.75%, #ff963c 86.64%);
 }
-
 .bg-primary-bold {
   background-color: var(--primary-400);
 }
+.bg-black-custom {
+  background-color: var(--dark-600);
+}
 
+/* BORDER */
 .border-primary {
   border-color: var(--primary-300);
 }
@@ -34,6 +35,7 @@
   border-color: #707070;
 }
 
+/* TEXT */
 .text-primary {
   font-weight: 400;
   color: var(--primary-300);
@@ -42,7 +44,12 @@
   font-weight: 400;
   color: var(--dark-500);
 }
+.text-primary-400 {
+  font-weight: 300;
+  color: var(--primary-400);
+}
 
+/* MISC */
 .scrollable-element::-webkit-scrollbar {
   width: 6px;
 }

@@ -5,102 +5,103 @@ import { ReactComponent as Cup } from "../../assets/icons/icon_cup.svg";
 import Button from "../shared/Button";
 import MealItem from "./components/MealItem";
 
+const tabs = [
+  {
+    label: "Morning",
+    content: [
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-morning",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-morning",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-morning",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-morning",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-morning",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-morning",
+      },
+    ],
+  },
+  {
+    label: "Lunch",
+    content: [
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-lunch",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-lunch",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-lunch",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-lunch",
+      },
+    ],
+  },
+  {
+    label: "Dinner",
+    content: [
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-dinner",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-dinner",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-dinner",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-dinner",
+      },
+    ],
+  },
+  {
+    label: "Snack",
+    content: [
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-snack",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-snack",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-snack",
+      },
+      {
+        img: "https://picsum.photos/200",
+        date: "22/5-snack",
+      },
+    ],
+  },
+];
+
 export const MealTabs = ({ tabsEndpoint }) => {
   //   const [tabs, setTabs] = useState([]);
-  const tabs = [
-    {
-      label: "Morning",
-      content: [
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-morning",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-morning",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-morning",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-morning",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-morning",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-morning",
-        },
-      ],
-    },
-    {
-      label: "Lunch",
-      content: [
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-lunch",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-lunch",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-lunch",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-lunch",
-        },
-      ],
-    },
-    {
-      label: "Dinner",
-      content: [
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-dinner",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-dinner",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-dinner",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-dinner",
-        },
-      ],
-    },
-    {
-      label: "Snack",
-      content: [
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-snack",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-snack",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-snack",
-        },
-        {
-          img: "https://picsum.photos/200",
-          date: "22/5-snack",
-        },
-      ],
-    },
-  ];
   const [activeTab, setActiveTab] = useState(0);
   const [visibleItems, setVisibleItems] = useState(4);
 
@@ -155,7 +156,7 @@ export const MealTabs = ({ tabsEndpoint }) => {
           >
             <div className="w-3/4 mx-auto grid grid-cols-4 gap-2">
               {tab.content.slice(0, visibleItems).map((item, index) => (
-                <MealItem item={item} index={index} />
+                <MealItem key={index} item={item} />
               ))}
             </div>
             {tab.content.length > visibleItems ? (

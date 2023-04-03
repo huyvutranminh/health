@@ -1,9 +1,9 @@
 import React from "react";
 
-const MealItem = ({ item }) => {
+const ColumnItem = ({ item }) => {
   return (
     <div className="w-full relative">
-      <div className="relative bg-slate-200 pt-[100%] overflow-hidden">
+      <div className="relative bg-slate-200 pt-[61.7%] overflow-hidden">
         <img
           src={item.img}
           alt="meal"
@@ -13,8 +13,12 @@ const MealItem = ({ item }) => {
           {item.date}
         </p>
       </div>
+      <div className="mt-2">
+        <p className="text-dark line-clamp-2 font-light">{item.content}</p>
+        <p className="text-xs text-primary-400">{item.hashtags}</p>
+      </div>
     </div>
   );
 };
 
-export default MealItem;
+export default ColumnItem;
