@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+:root {
+  --dark-500: #414141;
+  --dark-600: #2e2e2e;
+  --dark-600-light: rgba(46, 46, 46, 0.25);
+  --primary-300: #ffcc21;
+  --primary-400: #ff963c;
+  --gray: #777777;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-dark {
+  background-color: var(--dark-500);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-overlay {
+  background-color: var(--dark-600-light);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-yellow-custom {
+  background-color: var(--primary-300);
 }
 
-.App-link {
-  color: #61dafb;
+.bg-gradient {
+  background: linear-gradient(32.95deg, #ffcc21 8.75%, #ff963c 86.64%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-primary-bold {
+  background-color: var(--primary-400);
+}
+
+.border-primary {
+  border-color: var(--primary-300);
+}
+.border-dark {
+  border-color: #707070;
+}
+
+.text-primary {
+  font-weight: 400;
+  color: var(--primary-300);
+}
+.text-dark {
+  font-weight: 400;
+  color: var(--dark-500);
+}
+
+.scrollable-element::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollable-element::-webkit-scrollbar-track {
+  background: var(--gray);
+}
+.scrollable-element::-webkit-scrollbar-thumb {
+  background: var(--primary-300);
 }
